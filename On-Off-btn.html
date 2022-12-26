@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp site</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+        body{
+            background-color: rgb(223, 155, 72);
+            text-align: center;display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.7s;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .btn-bg{
+            width: 15vw;
+            height: 7vh;
+            border-radius: 33px;
+            background-color: aliceblue;
+            box-shadow: 3.5px 2.5px rgba(85, 83, 83, 0.808);
+            display: flex;
+            align-items: center;
+            padding: .3vh .4vw;
+            /* transition: all 3s ease-out; */
+            text-align: center;
+        }
+        .btn{
+            transition: 0.4s;
+            width: 6vh;
+            height: 6vh;
+            background-color: rgb(147, 88, 202);
+            border-radius: 50%;
+            cursor: pointer ;
+            /* position: absolute;
+            top: 47.9vh;left: 41.7vw; */
+        }
+        .btn-bg h2{
+            font-family: 'Macondo', cursive;
+            padding:0 1.7vw;
+        }
+        .btn-on{
+            /* left: 52.65vw; */
+            flex-direction: row-reverse;
+        }
+        .btn-color{
+            background-color: rgb(223, 155, 72);
+        }
+        .body-color{
+            background-color: rgb(147, 88, 202);
+        }
+        .set{
+            margin-bottom:1vw ;
+        }
+        .set p{
+            font-weight: bold;
+            font-size: 25px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        .set input{
+            width: 8vw;
+            height: 5vh;
+            border: none;
+            /* padding: 0%; */
+        }
+    </style>
+</head>
+<body id="body">
+    <!-- <div class="set">
+        <p>Color 1: <input type="color" id="color1" onchange=color1Changed()></p> -->
+        <div class="container">
+            <div class="btn-bg">
+                <div class="btn"></div>
+                <h2 id="h2">OFF</h2>
+            </div>
+        </div>
+        <!-- <p>Color 2: <input type="color" id="color2" onchange=color2Changed()></p>
+    </div> -->
+</body>
+    <script>
+        let btn_bg=document.getElementsByClassName("btn-bg");
+        let btn=document.querySelector(".btn");
+        console.log(btn.classList.attributes)
+        // function color1Changed(){
+        //     btn.create
+        // }
+        btn_bg[0].addEventListener('click',()=>{
+            btn_bg[0].classList.toggle('btn-on');
+            btn.classList.toggle("btn-color");
+        if(h2.innerText==="ON"){
+            h2.innerText="OFF";
+        }else{
+                h2.innerText="ON";
+            }
+        body.classList.toggle("body-color");
+        });
+
+    </script>
+</body>
+</html>
